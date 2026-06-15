@@ -6,9 +6,9 @@
 
 
 
-Building a Test-Bed for DS-Lite Technology for IPv6 Transition Technology
+Buildung a AFTR for my DSL Homelab
 
-Ansible software was used in order to automate the porcess of building the machines (IPv4 client, IPv4 server, B4 and AFTR).
+Ansible software was used in order to automate the porcess of building the machines (AFTR).
 
 
 Just get the toplogy built, as shown in the the above topoloy.
@@ -24,34 +24,6 @@ Pre-requisites:-
 3- yum install ansible
 
 To runn the installation scripts, run the below commannds: -
-
-On IPv4 clinet: -
-
-`
-ansible-playbook IPv4-client.yml
-`
-
-On IPv4 Server: -
-
-`
-ansible-playbook IPv4-server.yml
-`
-
-On B4 Router: -
-
-`
-ansible-playbook B4.yml
-`
-
 On AFTR Router: -
 
-`
 ansible-playbook AFTR.yml
-`
-
-
-On Attacker machine: -
-
-`
-ansible-playbook attacker.yml
-`
