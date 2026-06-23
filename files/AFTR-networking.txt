@@ -5,7 +5,7 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 echo 1 > /proc/sys/net/ipv6/conf/all/forwarding
 
 # set up IPIP6 link
-ip link add name ipip6 type ip6tnl local 2001:db8:0:1::1 remote 2001:db8:0:1::2 mode any dev ens34
+ip link add name ipip6 type ip6tnl local 2a06:9801:8c:301::11 remote 2a06:9801:8c:301::1 mode any dev eth1
 ip link set dev ipip6 up
 
 # Set route for packets headings toward B4 Router
@@ -21,9 +21,9 @@ ip6tables -X
 iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 
 # Dropping any traffic that coming from B4 address but not having B4 ens39 MAC address
-ip6tables -A INPUT -i ens34 -s 2001:db8:0:1::2 -m mac ! --mac-source 00:0c:29:67:14:14 -j DROP
+#ip6tables -A INPUT -i eth1 -s 2001:db8:0:1::2 -m mac ! --mac-source 00:0c:29:67:14:14 -j DROP
 
 
 # Masqurading AFTR ens35 interface
-iptables -t nat -A POSTROUTING -o ens35 -j MASQUERADE
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 
