@@ -2,7 +2,7 @@
 
 
 
-![Fig 6](https://github.com/hackyannick/DS-Lite_AFTR/blob/main/files/219900682-4d20a6e3-9187-4019-a216-d74e707780be.png?raw=true)
+![Fig 6](https://github.com/hackyannick/DS-Lite_AFTR/blob/main/files/pict.png?raw=true)
 
 
 
